@@ -1,0 +1,7 @@
+create table sign_up_details(email varchar2(35) primary key, password varchar2(15) not null, secret varchar2(15) not null)
+
+create table contact(name varchar2(20)not null, 
+    phone varchar2(10) not null, 
+    email varchar2(20) not null, 
+    usermail varchar2(35), 
+    FOREIGN KEY (usermail) REFERENCES sign_up_details(email))
